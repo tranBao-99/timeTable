@@ -1,0 +1,83 @@
+.TimeSheet {
+    display: flex;
+    flex-direction: row;
+}
+.title {
+    text-align: center;
+    border: solid 1px red;
+    background-color: aquamarine;
+    height: 35px;
+    border-radius: 5px;
+    margin: 1px;
+    line-height: 30px;
+    width: 70px;
+    color: crimson;
+    font-weight: bold;
+}
+.day {
+    display: flex;
+    flex-direction: column;
+}
+.num {
+    display: flex;
+    flex-direction: column;
+}
+.dayItem {
+    background-color: aquamarine;
+    color: crimson;
+    width: 70px;
+    height: 356px;
+    text-align: center;
+    line-height: 260px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 20px;
+}
+
+.numItem {
+    background-color: aquamarine;
+    color: crimson;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    line-height: 45px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 14px;
+}
+.Time {
+    display: flex;
+    flex-direction: column;
+}
+.titleTime {
+    text-align: center;
+    border: solid 1px red;
+    background-color: aquamarine;
+    height: 35px;
+    border-radius: 5px;
+    margin: 1px;
+    line-height: 30x;
+    width: 120px;
+    color: crimson;
+    font-weight: bold;
+}
+.timeItem {
+    background-color: aquamarine;
+    color: crimson;
+    width: 120px;
+    height: 49px;
+    text-align: center;
+    line-height: 41px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 14px;
+}

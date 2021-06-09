@@ -1,0 +1,106 @@
+.GroupTimeTable {
+    height: 1000px;
+    width: 2000px;
+}
+.SelectGroup {
+    display: flex;
+    flex-direction: row;
+}
+select {
+    width: 100px;
+    height: 40px;
+    border: none;
+    margin-top: 26px;
+    margin-left: 5px;
+    font-size: 27px;
+    color: crimson;
+    font-weight: bold;
+}
+
+.t-head {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 10%;
+}
+h1 {
+    margin-left: 600px;
+    color: lawngreen;
+}
+.THleft {
+    display: flex;
+    flex-direction: row;
+}
+.THright {
+    display: flex;
+    flex-direction: row;
+}
+
+.t-head-title {
+    text-align: center;
+    border: solid 1px red;
+    background-color: aquamarine;
+    height: 50px;
+    border-radius: 5px;
+    margin: 1px;
+    line-height: 5px;
+    width: 70px;
+    color: crimson;
+    font-weight: bold;
+}
+.t-head-Day {
+    display: flex;
+    flex-direction: column;
+}
+.t-head-Num {
+    display: flex;
+    flex-direction: column;
+}
+.t-head-dayItem {
+    background-color: aquamarine;
+    color: crimson;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 15px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 16px;
+}
+
+.t-head-numItem {
+    background-color: aquamarine;
+    color: crimson;
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    line-height: 15px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 16px;
+}
+.t-head-Time {
+    display: flex;
+    flex-direction: column;
+}
+.t-head-timeItem {
+    background-color: aquamarine;
+    color: crimson;
+    width: 120px;
+    height: 50px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 16px;
+}

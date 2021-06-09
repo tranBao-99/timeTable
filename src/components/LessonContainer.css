@@ -1,0 +1,42 @@
+.LessonContainer {
+    display: flex;
+    flex-direction: column;
+}
+.ClassName {
+    text-align: center;
+    border: solid 1px red;
+    background-color: aquamarine;
+    height: 35px;
+    border-radius: 5px;
+    margin: 1px;
+    line-height: 30px;
+    font-weight: bold;
+    color: crimson;
+}
+.Lesson {
+    background-color: aquamarine;
+    color: rgb(212, 55, 27);
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 500;
+    border: solid 1px;
+    font-size: 15px;
+    border-radius: 5px;
+    margin: 1px;
+    cursor: grab;
+}
+.Lesson--dragging {
+    opacity: 0.5;
+}
+.Lesson:hover {
+    background-color: aqua;
+    opacity: 0.5;
+}
+.noti {
+    opacity: 0.5;
+}
+.tip {
+    color: brown;
+}

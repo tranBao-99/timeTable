@@ -1,0 +1,18 @@
+.DashBoard {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+.link {
+    font-size: 20px;
+    list-style-type: none;
+    margin-top: 20px;
+    font-weight: bold;
+    color: crimson;
+    margin-left: 100px;
+    text-decoration: none;
+}
+.Input {
+    margin-top: 20px;
+    margin-left: 300px;
+}
