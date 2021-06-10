@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import './LessonContainer.css'
 import PropTypes from 'prop-types';
 import axios from "axios";
@@ -13,7 +13,6 @@ function LessonContainer( props ) {
     const [ lessons, setLessons ] = useState( [] );
     const [ allLessons, setAllLessons ] = useState( [] );
     const [ dragItem, setDragItem ] = useState();
-    const [ dropItem, setDropItem ] = useState();
 
     useEffect( () => {
         axios.get( `http://localhost:3001/lesson/${team}` )
@@ -150,7 +149,7 @@ function LessonContainer( props ) {
                                     onDragStart={ ( e ) => onDragStart( e, les ) }
                                     onDrop={ ( e ) => onDropHandler( e, les ) }
                                     className="Lesson"
-                                    draggable="true"
+                                    draggable="false"
                                 >
                                     <p>{ les.subject }{ ( les.teacher ) ? ( '-' + les.teacher ) : null }</p>
                                 </div>

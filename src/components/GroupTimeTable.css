@@ -1,32 +1,36 @@
 .GroupTimeTable {
-    height: 1000px;
-    width: 2000px;
+    height: 800px;
+    width: max-content;
+    background-color: #ffdee9;
+    background-image: linear-gradient(0deg, #ffdee9 0%, #b5fffc 100%);
 }
 .SelectGroup {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
-select {
+.GroupSelect {
     width: 100px;
     height: 40px;
     border: none;
-    margin-top: 26px;
-    margin-left: 5px;
-    font-size: 27px;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: 25px;
     color: crimson;
     font-weight: bold;
+    background-color: #b5fffc;
 }
 
 .t-head {
     display: flex;
     flex-direction: row;
     margin-top: 20px;
-    margin-left: 100px;
-    margin-right: 10%;
+    margin-left: 160px;
+    margin-right: 200px;
 }
 h1 {
-    margin-left: 600px;
-    color: lawngreen;
+    margin-left: 20%;
+    color: rgb(194, 52, 194);
 }
 .THleft {
     display: flex;
@@ -44,7 +48,7 @@ h1 {
     height: 50px;
     border-radius: 5px;
     margin: 1px;
-    line-height: 5px;
+    line-height: 40 px;
     width: 70px;
     color: crimson;
     font-weight: bold;
@@ -63,7 +67,7 @@ h1 {
     width: 200px;
     height: 50px;
     text-align: center;
-    line-height: 15px;
+    line-height: 40px;
     font-weight: 500;
     border: solid 1px;
     font-size: 12px;
@@ -78,7 +82,7 @@ h1 {
     width: 70px;
     height: 50px;
     text-align: center;
-    line-height: 15px;
+    line-height: 40px;
     font-weight: 500;
     border: solid 1px;
     font-size: 12px;
@@ -96,7 +100,7 @@ h1 {
     width: 120px;
     height: 50px;
     text-align: center;
-    line-height: 20px;
+    line-height: 40px;
     font-weight: 500;
     border: solid 1px;
     font-size: 12px;

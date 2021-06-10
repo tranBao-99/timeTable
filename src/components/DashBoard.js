@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import "./DashBoard.css"
 import { Link } from 'react-router-dom';
 import * as XLSX from "xlsx";
 import Axios from "axios";
+import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
 
 function DashBoard() {
     const readExcel = ( file ) => {
@@ -56,7 +57,7 @@ function DashBoard() {
 
     return (
 
-        <div className="DashBoard">
+        /*<div className="DashBoard" >
             <Link
                 className="link"
                 to='/'>
@@ -67,10 +68,7 @@ function DashBoard() {
                 to='/groupTimeTable'>
                 TKB theo lớp
             </Link>
-            <Link className="link"
-                to='/teacherTimeTable'>
-                Lịch dạy của gv
-            </Link>
+            
             <div className="Input">
                 <input
                     type="file"
@@ -79,7 +77,28 @@ function DashBoard() {
                         readExcel( file )
                     } }></input>
             </div>
-        </div>
+        </div>*/
+        <Navbar bg="primary" variant="dark">
+            <Navbar.Brand
+                href="/"
+            >Thời khóa biểu</Navbar.Brand>
+            <Nav className="mr-auto">
+                <Link
+                    className="link"
+                    to='/'>
+                    Toàn trường
+                </Link>
+                <Link
+                    className="link"
+                    to='/groupTimeTable'>
+                    Theo lớp
+                </Link>
+                <Link className="link"
+                    to='/teacherTimeTable'>
+                    Lịch dạy của gv
+                </Link>
+            </Nav>
+        </Navbar >
 
     );
 }
