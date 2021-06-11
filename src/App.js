@@ -30,12 +30,12 @@ function App() {
 
   return (
     <div className="App">
-      { <Router>
+      { ( <Router>
         <DashBoard />
         <Route exact path="/"><SchoolTimeTable all={ allLessons } /></Route>
         <Route path="/groupTimeTable"> <GroupTimeTable allLessons={ allLessons } /></Route>
         <Route path="/teacherTimeTable"><TeacherTimeTable allLessons={ allLessons } /></Route>
-      </Router> }
+      </Router> ) }
     </div >
   );
 

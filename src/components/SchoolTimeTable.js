@@ -29,7 +29,7 @@ function SchoolTimeTable( props ) {
                     return ( item.class === g && item.day === d && item.num === n );
                 } )
 
-                a[ `${g}` ] = ( les[ 0 ]?.teacher ) ? `${les[ 0 ]?.subject}  - ${les[ 0 ]?.teacher}` : `${les[ 0 ]?.subject}`;
+                a[ `${g}` ] = ( les[ 0 ] ) ? `${les[ 0 ]?.subject}  - ${les[ 0 ]?.teacher}` : `${les[ 0 ]?.subject}`;
             } );
             array.push( a );
         } )

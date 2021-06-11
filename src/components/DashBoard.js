@@ -69,14 +69,7 @@ function DashBoard() {
                 TKB theo lớp
             </Link>
             
-            <div className="Input">
-                <input
-                    type="file"
-                    onChange={ ( e ) => {
-                        const file = e.target.files[ 0 ]
-                        readExcel( file )
-                    } }></input>
-            </div>
+            
         </div>*/
         <Navbar bg="primary" variant="dark">
             <Navbar.Brand
@@ -98,6 +91,15 @@ function DashBoard() {
                     Lịch dạy của gv
                 </Link>
             </Nav>
+
+            <div className="Input">
+                <input
+                    type="file"
+                    onChange={ ( e ) => {
+                        const file = e.target.files[ 0 ]
+                        readExcel( file )
+                    } }></input>
+            </div>
         </Navbar >
 
     );

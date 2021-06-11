@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import './LessonContainer.css'
 import PropTypes from 'prop-types';
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 LessonContainer.propTypes = {
@@ -36,6 +38,8 @@ function LessonContainer( props ) {
             } );
     }
 
+
+
     function onDragStart( e, les ) {
         setDragItem( les );
     }
@@ -55,9 +59,17 @@ function LessonContainer( props ) {
     function onDropHandler( e, les ) {
         //check1( dragItem, les );
         e.preventDefault();
+        let kt = true;
+        var Error;
+
         if ( les?.class !== dragItem?.class ) {
             setDragItem( null );
-            alert( "Không thể thay đổi tiết học khác lớp" );
+            toast.error( "Không thể đổi chỗ hai tiết học khác lớp", {
+                position: "top-center",
+                closeOnClick: true,
+                pauseOnHover: false,
+                autoClose: 4000
+            } )
             return;
         }
 
@@ -65,11 +77,18 @@ function LessonContainer( props ) {
         //console.log( 'drag', dragItem );
         //console.log( 'drop', les );
 
-        var Error;
+
         let all = allLessons;
-        let kt = true;
 
+        if ( kt && les.day === '2' && les.num === 1 ) {
+            kt = false;
+            Error = `Không thể thay đổi tiết ${les.subject}`;
+        }
 
+        if ( kt && dragItem.day === '2' && dragItem.num === 1 ) {
+            kt = false;
+            Error = `Không thể thay đổi tiết ${dragItem.subject}`;
+        }
 
         if ( kt ) {
             let filter1 = all.filter( item => {
@@ -124,43 +143,58 @@ function LessonContainer( props ) {
             } )
             setDragItem();
             setLessons( newLe );
+            toast.success( "Đổi chỗ hai môn học thành công", {
+                position: "top-center",
+                closeOnClick: true,
+                pauseOnHover: false,
+                autoClose: 2000
+            } )
         }
         else {
             setDragItem();
-            alert( Error );
+            toast.error( Error, {
+                position: "top-center",
+                closeOnClick: true,
+                pauseOnHover: false,
+                autoClose: 4000
+            } )
             return;
         }
     }
 
     return (
-        <div className="LessonContainer">
-            <div className="Class">
-                <div className="ClassName">
-                    <p>{ team }</p>
-                </div>
-                <div className="Lessons">
-                    {
-                        lessons.map( ( les ) => {
-                            return (
-                                <div
-                                    onDragLeave={ ( e ) => onDragLeave( e ) }
-                                    onDragOver={ ( e ) => onDragOver( e ) }
-                                    onDragEnd={ ( e ) => onDragEnd( e ) }
-                                    onDragStart={ ( e ) => onDragStart( e, les ) }
-                                    onDrop={ ( e ) => onDropHandler( e, les ) }
-                                    className="Lesson"
-                                    draggable="false"
-                                >
-                                    <p>{ les.subject }{ ( les.teacher ) ? ( '-' + les.teacher ) : null }</p>
-                                </div>
-                            );
-                        } )
+        <>
 
-                    }
+            <div className="LessonContainer">
+                <div className="Class">
+                    <div className="ClassName">
+                        <p>{ team }</p>
+                    </div>
+                    <div className="Lessons">
+                        {
+                            lessons.map( ( les ) => {
+                                return (
+                                    <div
+                                        onDragLeave={ ( e ) => onDragLeave( e ) }
+                                        onDragOver={ ( e ) => onDragOver( e ) }
+                                        onDragEnd={ ( e ) => onDragEnd( e ) }
+                                        onDragStart={ ( e ) => onDragStart( e, les ) }
+                                        onDrop={ ( e ) => onDropHandler( e, les ) }
+                                        className="Lesson"
+                                        draggable="true"
+                                    >
+                                        <p>{ les.subject }{ ( les.teacher ) ? ( '-' + les.teacher ) : null }</p>
+                                    </div>
+                                );
+                            } )
+
+                        }
+
+                    </div>
                 </div>
             </div>
-        </div>
-
+            <ToastContainer />
+        </>
 
     );
 }
